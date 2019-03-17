@@ -7,6 +7,7 @@ app.use(bodyParser.json());
 const port = 3000;
 
 var categoryService = require('./services/category');
+var productService = require('./services/products');
 
 logger.info("server started at port: ", port);
 //CORS
@@ -18,6 +19,6 @@ app.use(function(req, res, next) {
 
 //api
 app.get('/getcategories',categoryService.getAllCategories);
-
+app.get('/getproduct/:category',productService.getProductByCategory);
 
 app.listen(port, () => console.log(`Inventory Management app listening on port ${port}!`));
