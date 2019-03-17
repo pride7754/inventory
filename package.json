@@ -1,0 +1,35 @@
+{
+  "name": "inventory",
+  "version": "1.0.0",
+  "description": "inventory management",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pride7754/inventory.git"
+  },
+  "keywords": [
+    "inventory",
+    "category",
+    "products"
+  ],
+  "author": "Priyanka Deshmukh",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pride7754/inventory/issues"
+  },
+  "homepage": "https://github.com/pride7754/inventory#readme",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "express": "^4.16.4",
+    "mongodb": "^3.1.13",
+    "nodemon": "^1.18.10",
+    "tracer": "^0.9.8"
+  },
+  "devDependencies": {
+    "nodemon": "^1.18.10"
+  }
+}
