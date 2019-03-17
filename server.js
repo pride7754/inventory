@@ -22,7 +22,7 @@ app.post('/addcategory', categoryService.addCategory);
 app.post('/addproduct', productService.addProduct);
 app.get('/getcategories', categoryService.getAllCategories);
 app.get('/getproduct/:category', productService.getProductByCategory);
-
+app.put('/updateproduct/:product_id',productService.updateProduct);
 
 app.listen(port, () => console.log(`Inventory Management app listening on port ${port}!`));
 
