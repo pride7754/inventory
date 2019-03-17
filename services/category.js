@@ -11,7 +11,7 @@ var schemaValidatorForAddCategory = function (inputPayload) {
             schema_err = "Category id is required and should be numeric.";
             return schema_err;
         }
-        if (!inputPayload.hasOwnProperty("category_name") || typeof(inputPayload.category_name) !== "string") {
+        if (!inputPayload.hasOwnProperty("category_name") || typeof (inputPayload.category_name) !== "string") {
             logger.info("category name err.");
             schema_err = "Category name is required and should be string.";
             return schema_err;
@@ -28,11 +28,11 @@ var schemaValidatorForAddCategory = function (inputPayload) {
 };
 
 /** function to add Category */
-var addCategory  = async function (req, res) {
+var addCategory = async function (req, res) {
     logger.info("inside addCategory");
     let categoryDetails = null;
     let schemaValidator = schemaValidatorForAddCategory(req.body);
-    if(!schemaValidator) {
+    if (!schemaValidator) {
         logger.info("Input payload is right.");
         categoryDetails = req.body;
         await MongoClient.connect(url, { useNewUrlParser: true }, function (_err, client) {
@@ -55,28 +55,26 @@ var addCategory  = async function (req, res) {
 };
 
 /** function to get all categories.*/
-var getAllCategories  = async function (req, res) {
+var getAllCategories = async function (req, res) {
     logger.info("inside getAllCategories");
     await MongoClient.connect(url, { useNewUrlParser: true }, function (_err, client) {
         _db = client.db("inventory");
-        _db.collection("category").find({},{ projection: { _id: 0}}).toArray(function (err, docs) {
-          if (err) {
-              logger.info("Error in inserting category.");
-              res.send(err.message);
-          }
-          if (docs) {
-            logger.info("found record.");
-            res.json(docs);
-          }
+        _db.collection("category").find({}, { projection: { _id: 0 } }).toArray(function (err, docs) {
+            if (err) {
+                logger.info("Error in inserting category.");
+                res.send(err.message);
+            }
+            if (docs) {
+                logger.info("found record.");
+                res.json(docs);
+            }
         });
         client.close();
     });
 };
 
-module.exports= {
+module.exports = {
     addCategory,
     getAllCategories
 };
-
-
 
