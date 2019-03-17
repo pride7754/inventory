@@ -18,6 +18,7 @@ app.use(function(req, res, next) {
   });
 
 //api
+app.post('/addcategory',categoryService.addCategory);
 app.get('/getcategories',categoryService.getAllCategories);
 app.get('/getproduct/:category',productService.getProductByCategory);
 
