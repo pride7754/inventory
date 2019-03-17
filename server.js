@@ -4,8 +4,10 @@ const bodyParser = require('body-parser');
 const app = express();
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
-
 const port = 3000;
+
+var categoryService = require('./services/category');
+
 logger.info("server started at port: ", port);
 //CORS
 app.use(function(req, res, next) {
@@ -13,5 +15,9 @@ app.use(function(req, res, next) {
     res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
     next();
   });
+
+//api
+app.get('/getcategories',categoryService.getAllCategories);
+
 
 app.listen(port, () => console.log(`Inventory Management app listening on port ${port}!`));
