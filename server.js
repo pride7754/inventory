@@ -7,4 +7,11 @@ app.use(bodyParser.json());
 
 const port = 3000;
 logger.info("server started at port: ", port);
+//CORS
+app.use(function(req, res, next) {
+    res.header("Access-Control-Allow-Origin", "*");
+    res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+    next();
+  });
+
 app.listen(port, () => console.log(`Inventory Management app listening on port ${port}!`));
