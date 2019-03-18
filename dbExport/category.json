@@ -1,0 +1,40 @@
+{
+	"_id" : ObjectId("5c8d0d670e1ed29596011fc3"),
+	"category_id" : 3,
+	"category_name" : "Sport Shoes",
+	"child_categories" : [ ]
+},
+{
+	"_id" : ObjectId("5c8d0e130e1ed29596011fc4"),
+	"category_id" : 4,
+	"category_name" : "Shoes",
+	"child_categories" : [
+		{
+			"category_id" : 3,
+			"category_name" : "Sport Shoes",
+			"child_categories" : [ ]
+		},
+		{
+			"category_id" : 2,
+			"category_name" : "Casual Shoes",
+			"child_categories" : [ ]
+		},
+		{
+			"category_id" : 1,
+			"category_name" : "Formal Shoes",
+			"child_categories" : [ ]
+		}
+	]
+},
+{
+	"_id" : ObjectId("5c8e645fe8d7cd6bf780873d"),
+	"category_id" : NumberInt(1),
+	"category_name" : "Formal Shoes",
+	"child_categories" : [ ]
+},
+{
+	"_id" : ObjectId("5c8e97c206f48a08f7d74f96"),
+	"category_id" : NumberInt(2),
+	"category_name" : "Casual Shoes",
+	"child_categories" : [ ]
+},

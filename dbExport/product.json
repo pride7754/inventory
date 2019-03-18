@@ -1,0 +1,33 @@
+{
+	"_id" : ObjectId("5c8d08470e1ed29596011fc2"),
+	"product_category" : [
+		"Footwear",
+		"Shoes",
+		"Sport Shoes"
+	],
+	"product_id" : NumberInt(3002),
+	"product_name" : "Nike sports shoes",
+	"product_price" : 3999
+},
+{
+	"_id" : ObjectId("5c8d618f0e1ed29596011fc5"),
+	"product_category" : [
+		"Footwear",
+		"Shoes",
+		"Casual Shoes"
+	],
+	"product_id" : 2001,
+	"product_name" : "Woodland casual shoes",
+	"product_price" : 2099
+},
+{
+	"_id" : ObjectId("5c8ea232f6d4f50f52f322a6"),
+	"product_category" : [
+		"Footwear",
+		"Shoes",
+		"Formal Shoes"
+	],
+	"product_id" : NumberInt(1002),
+	"product_name" : "Bata formal shoes",
+	"product_price" : NumberInt(1199)
+},
